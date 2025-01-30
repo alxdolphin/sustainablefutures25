@@ -8,6 +8,51 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="rsc/css/style.css" />
+    <style>
+      :root {
+        --primary-color: #4CAF50;
+        --border-style: 2px solid #333;
+        --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      .section-container {
+        border: var(--border-style);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        background-color: white;
+      }
+      
+      .navbar {
+        box-shadow: var(--box-shadow);
+      }
+      
+      .jumbotron {
+        background-color: var(--primary-color) !important;
+        margin-bottom: 2rem !important;
+        box-shadow: var(--box-shadow);
+      }
+      
+      .partner-list li {
+        transition: all 0.3s ease;
+      }
+      
+      .partner-list li:hover {
+        background-color: #f8f9fa;
+        padding-left: 10px;
+      }
+      
+      .event-image {
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease;
+      }
+      
+      .event-image:hover {
+        transform: scale(1.02);
+      }
+    </style>
   </head>
 
   <body>
@@ -45,45 +90,81 @@
       </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid text-center" style="background-color: #4CAF50; color: white;">
-      <h1 style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>2025 Sustainable Futures Resource Fair</b></h1>
-      <p></p>
+    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: #4CAF50; color: white; margin-bottom: 1rem; min-height: 150px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);">
+      <div>
+        <h1 class="h2" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>2025 Sustainable Futures Resource Fair</b></h1>
+        <h3 class="h4" style="text-shadow: 2px -2px 0 #000, -2px -2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000;">Route 9 Library and Innovation Center</h3>
+        <h4 class="h5" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">March 8, 2025 11:00 AM - 2:00 PM</h4>
+        <p></p>
+      </div>
     </div>
 
     <div class="container">
-      <section id="about" style="border: 2px solid black; padding: 20px;">
+      <section id="about" class="section-container">
         <h2>About</h2>
         <p>
-            The 2025 Sustainable Futures Resource Fair aims to bring together local organizations and experts to share information, resources, and actionable steps that inspire patrons to protect their health and the environment. We are particularly focused on health aspects closely tied to environmental factors, such as air quality's impact on respiratory health, sustainable food systems and dietary health, and similar topics.
+            The <b>2025 Sustainable Futures Resource Fair</b> aims to bring together local organizations and experts to share information, resources, and actionable steps that inspire patrons to protect their health and the environment. We are particularly focused on health aspects closely tied to environmental factors, such as air quality's impact on respiratory health, sustainable food systems and dietary health, and similar topics.
         </p>
       </section>
 
       <div class="row mt-4">
-        <div class="col-md-4">
-          <section id="partners" style="border: 2px solid black; padding: 20px;">
-            <h2>Partners</h2>
-            <ul class="list-unstyled">
-              <li><a href="https://cleanair.org/">Clean Air Council</a></li>
-              <li><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
-              <li><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
-              <li><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></li>
-              <li><a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html">Delaware Health and Social Services (DHSS) - Diabetes and Heart Disease Prevention and Control</a></li>
-              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environment/natural-resources/delaware-master-naturalist/">Delaware Master Naturalists</a></li>
-              <li><a href="https://www.delawarenaturesociety.org/">Delaware Nature Society</a></li>
-              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/personal-economic-development/urban-agriculture/">Delaware Urban Farm and Food Coalition</a></li>
-              <li><a href="https://www.delawareonline.com/story/news/2021/07/12/delawares-first-resilience-hub-opens-wilmington/7935480002/">Delaware's First Resilience Hub</a></li>
-              <li><a href="https://plasticfreedelaware.org/">Plastic Free Delaware / Zero Waste First State</a></li>
-              <li><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></li>
-              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></li>
-              <li><a href="https://westendnh.org/">West End Neighborhood House</a></li>
+        <div class="col-md-3">
+          <section id="partners" class="section-container">
+            <h2 class="text-center mb-4">Partners</h2>
+            <ul class="list-unstyled partner-list">
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://cleanair.org/">Clean Air Council</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html">Delaware Health and Social Services (DHSS) - Diabetes and Heart Disease Prevention and Control</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environment/natural-resources/delaware-master-naturalist/">Delaware Master Naturalists</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.delawarenaturesociety.org/">Delaware Nature Society</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/personal-economic-development/urban-agriculture/">Delaware Urban Farm and Food Coalition</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.delawareonline.com/story/news/2021/07/12/delawares-first-resilience-hub-opens-wilmington/7935480002/">Delaware's First Resilience Hub</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://plasticfreedelaware.org/">Plastic Free Delaware / Zero Waste First State</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center">Route 9 Library & Innovation Center</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></li>
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></li>
+              <li style="padding: 8px 0;"><a href="https://westendnh.org/">West End Neighborhood House</a></li>
             </ul>
           </section>
+        </div>
+        <div class="col-md-9 ">
+          <a href="https://forms.office.com/r/LnbMdHw0cC">
+            <img src="assets/slide.png" class="img-fluid w-100 event-image mb-4" alt="Sustainable Futures Resource Fair Image">
+          </a>
+          <div class="mt-3 section-container">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Schedule</h4>
+                <ul class="list-unstyled">
+                  <li><strong>10:00 AM:</strong> Set Up</li>
+                  <li><strong>11:00 AM:</strong> Event Opens - Visit Partner Tables</li>
+                  <li><strong>11:30 AM:</strong> Welcome Address</li>
+                  <li><strong>12:00 PM:</strong> Speaker Sessiona</li>
+                  <li><strong>1:45 PM:</strong> Closing Remarks</li>
+                  <li><strong>2:00 PM:</strong>Tear Down</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4>Event Information</h4>
+                <ul class="list-unstyled">
+                  <li><strong>Date:</strong> March 8, 2025</li>
+                  <li><strong>Time:</strong> 11:00 AM - 2:00 PM</li>
+                  <li><strong>Location:</strong> Route 9 Library and Innovation Center</li>
+                  <li><strong>Address:</strong> 3022 New Castle Ave, New Castle, DE 19720</li>
+                  <li><strong>Cost:</strong> Free and open to the public</li>
+                  <li><strong>Interested in contributing?:</strong> <a href="https://forms.office.com/r/LnbMdHw0cC">Click here to register</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <footer class="text-center py-3">
-      <p>&copy; 2025 Delaware Division of Libraries</p>
+    <footer class="text-center py-4 mt-5 bg-light">
+      <p class="mb-0">&copy; 2025 Delaware Division of Libraries</p>
     </footer>
   </body>
 </html>
