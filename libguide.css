@@ -1,0 +1,16 @@
+<style>
+  /* Removes the default search box */
+  #s-lg-guide-header-search {
+    display: none;
+  }
+
+  /* Removes the name of the guide from view */
+  #s-lg-guide-name {
+    display: none;
+  }
+
+  /* Removes the tabs from view */
+  #s-lg-tabs-container {
+    display: none;
+  }
+</style>
