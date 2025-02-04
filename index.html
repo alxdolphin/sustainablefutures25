@@ -3,16 +3,24 @@
   <head>
     <title>2025 Sustainabie Futures Resource Fair</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="rsc/css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
       :root {
         --primary-color: rgb(147, 177, 69);
         --border-style: 2px solid #333;
         --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        --font-primary: 'Roboto', sans-serif;
+        --font-secondary: 'Open Sans', sans-serif;
+        font-size: 18px;
+      }
+      
+      body {
+        font-size: 1rem;
+        line-height: 1.6;
       }
       
       .section-container {
@@ -34,6 +42,17 @@
         box-shadow: var(--box-shadow);
       }
       
+      .jumbotron h1 {
+        font-family: var(--font-primary);
+        font-weight: 700;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+      }
+      
+      .jumbotron h2, .jumbotron h3 {
+        font-family: var(--font-secondary);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+      }
+      
       .partner-list li {
         transition: all 0.3s ease;
       }
@@ -52,11 +71,31 @@
       .event-image:hover {
         transform: scale(1.02);
       }
+      
+      .schedule-item {
+        padding: 8px 0;
+        transition: all 0.2s ease;
+      }
+      
+      .schedule-item:hover {
+        background-color: #f8f9fa;
+        padding-left: 8px;
+      }
+      
+      .info-item {
+        padding: 8px 0;
+        transition: all 0.2s ease;
+      }
+      
+      .info-item:hover {
+        background-color: #f8f9fa;
+        padding-left: 8px;
+      }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="https://lib.de.us/"><img src="https://libraries.delaware.gov/wp-content/uploads/sites/123/2016/08/ddl_logo_hr.jpg" alt="Sustainability Futures Resource Fair" style="height: 40px; width: auto;"></a>
       <button
         class="navbar-toggler"
@@ -94,12 +133,11 @@
       This page is currently under development. Event details and schedule may be subject to change.
     </div>
 
-    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 150px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);">
-      <div>
-        <h1 class="h4" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>2025 Sustainable Futures Resource Fair</b></h1>
-        <h3 class="h3" style="text-shadow: 2px -2px 0 #000, -2px -2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000;">Route 9 Library and Innovation Center</h3>
-        <h4 class="h4" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">March 8, 2025 11:00 AM - 2:00 PM</h4>
-        <p></p>
+    <div class="jumbotron jumbotron-fluid text-center py-5 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 400px;">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">2025 Sustainable Futures Resource Fair</h1>
+        <h2 class="h2 mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Route 9 Library and Innovation Center</h2>
+        <h3 class="h3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">March 8, 2025 11:00 AM - 2:00 PM</h3>
       </div>
     </div>
 
@@ -116,6 +154,7 @@
           <section id="partners" class="section-container">
             <h2 class="text-center mb-4">Partners</h2>
             <ul class="list-unstyled partner-list">
+              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://heart.org/delaware">American Heart Association</a></li>
               <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://cleanair.org/">Clean Air Council</a></li>
               <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
               <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
@@ -140,26 +179,34 @@
           <div class="mt-3 section-container">
             <div class="row">
               <div class="col-md-6">
-                <h4>Schedule</h4>
-                <ul class="list-unstyled">
-                  <li><strong>10:00 AM:</strong> Set Up</li>
-                  <li><strong>11:00 AM:</strong> Event Opens - Visit Partner Tables</li>
-                  <li><strong>11:30 AM:</strong> Welcome Address</li>
-                  <li><strong>12:00 PM:</strong> Speaker Sessiona</li>
-                  <li><strong>1:45 PM:</strong> Closing Remarks</li>
-                  <li><strong>2:00 PM:</strong>Tear Down</li>
+                <h4 class="fw-bold text-success mb-3">Event Schedule</h4>
+                <ul class="list-unstyled border-start border-primary ps-3" style="border-left-width: 4px !important;">
+                  <li class="schedule-item"><strong>10:00 AM:</strong> Set Up</li>
+                  <li class="schedule-item"><strong>11:00 AM:</strong> Event Opens - Visit Partner Tables</li>
+                  <li class="schedule-item"><strong>11:30 AM:</strong> Welcome Address</li>
+                  <li class="schedule-item"><strong>12:00 PM:</strong> Speaker Sessions
+                    <ul>
+                      <li>12:00 PM - TBA</li>
+                      <li>12:15 PM - TBA</li>
+                      <li>12:30 PM - TBA</li>
+                    </ul>
+                  </li>
+                  <li class="schedule-item"><strong>1:45 PM:</strong> Closing Remarks</li>
+                  <li class="schedule-item"><strong>2:00 PM:</strong>Tear Down</li>
                 </ul>
               </div>
-              <div class="col-md-6">
-                <h4>Event Information</h4>
-                <ul class="list-unstyled">
-                  <li><strong>Date:</strong> March 8, 2025</li>
-                  <li><strong>Time:</strong> 11:00 AM - 2:00 PM</li>
-                  <li><strong>Location:</strong> Route 9 Library and Innovation Center</li>
-                  <li><strong>Address:</strong> 3022 New Castle Ave, New Castle, DE 19720</li>
-                  <li><strong>Cost:</strong> Free and open to the public</li>
-                  <li><strong>Interested in contributing?:</strong> <a href="https://forms.office.com/r/LnbMdHw0cC">Click here to register</a></li>
-                </ul>
+              <div class="col-md-6 d-flex align-items-center">
+                <div>
+                  <h4>Event Information</h4>
+                  <ul class="list-unstyled">
+                    <li><strong>Date:</strong> March 8, 2025</li>
+                    <li><strong>Time:</strong> 11:00 AM - 2:00 PM</li>
+                    <li><strong>Location:</strong> Route 9 Library and Innovation Center</li>
+                    <li><strong>Address:</strong> 3022 New Castle Ave, New Castle, DE 19720</li>
+                    <li><strong>Cost:</strong> Free and open to the public</li>
+                    <li class="d-flex align-items-center gap-2"><strong>Interested in contributing?</strong> <a href="https://forms.office.com/r/LnbMdHw0cC" class="btn btn-success btn-sm">Become a Partner</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
