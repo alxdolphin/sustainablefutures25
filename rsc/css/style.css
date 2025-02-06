@@ -1,0 +1,71 @@
+:root {
+  --primary-color: rgb(147, 177, 69);
+  --border-style: 2px solid #333;
+  --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section-container {
+  border: var(--border-style);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+.jumbotron {
+  background-color: var(--primary-color) !important;
+  margin-bottom: 2rem !important;
+  box-shadow: var(--box-shadow);
+}
+
+.partner-list li {
+  transition: all 0.3s ease;
+}
+
+.partner-list li:hover {
+  background-color: #f8f9fa;
+  padding-left: 10px;
+}
+
+.event-image {
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.02);
+}
+
+.schedule-item {
+  padding: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.schedule-item:hover {
+  background-color: #f8f9fa;
+  padding-left: 8px;
+}
+
+.info-item {
+  padding: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.info-item:hover {
+  background-color: #f8f9fa;
+  padding-left: 8px;
+} 

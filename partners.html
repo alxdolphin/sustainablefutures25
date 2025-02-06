@@ -15,170 +15,118 @@
         --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         --font-primary: 'Roboto', sans-serif;
         --font-secondary: 'Open Sans', sans-serif;
-        font-size: 18px;
-      }
-      
-      body {
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .partner-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-      }
-
-      .partner-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-      }
-
-      .partner-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--box-shadow);
-      }
-
-      .partner-logo {
-        width: 100%;
-        height: 120px;
-        object-fit: contain;
-        margin-bottom: 1rem;
-      }
-
-      .partner-name {
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      .partner-name:hover {
-        color: var(--primary-color);
-        text-decoration: none;
       }
     </style>
   </head>
-
   <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img src="https://libraries.delaware.gov/wp-content/uploads/sites/123/2016/08/ddl_logo_hr.jpg" alt="Sustainability Futures Resource Fair" style="height: 40px; width: auto;"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="https://lib.de.us/"><img src="https://libraries.delaware.gov/wp-content/uploads/sites/123/2016/08/ddl_logo_hr.jpg" alt="Sustainability Futures Resource Fair" style="height: 40px; width: auto;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/sustainablefutures25/home">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sustainablefutures25/about">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/sustainablefutures25/partners">Partners</a>
+            <a class="nav-link" href="partners.html">Partners</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#events">Events</a>
+            <a class="nav-link" href="index.html#events">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sustainablefutures25/contact">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
-    </nav> -->
+    </nav>
 
-    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 150px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);">
-      <div>
-        <h1 class="h2" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>Our Partners</b></h1>
-        <p style="font-style: italic; text-shadow: 2px 2px 4px #000;">We are grateful for the support of the following organizations and individuals who have made this event possible.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="partner-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;">
-
-        <a href="https://www.heart.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.heart.org/en/-/media/Images/Logos/Global-Do-No-Edit/Header/AHA_Full.svg?h=256&iar=0&mw=1910&w=426&sc_lang=en" alt="American Heart Association" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.6);">
-        </a>
-        <a href="https://cleanair.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-1/277148471_339229321578962_6487527125228882724_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=qLS3s0Emc9YQ7kNvgEgsKgo&_nc_zt=24&_nc_ht=scontent-lga3-2.xx&_nc_gid=ALCEMFoDTLP479219eBPQwx&oh=00_AYC4ZStXc8MZ5yBwBq9alWpyj-G-WigCstNncaGnE66n9A&oe=67A7117D" alt="Clean Air Council" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://www.thedch.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://corpsnetwork.org/wp-content/uploads/gravity_forms/10-e71dec903a7e429b90387f4e5e320e56/2023/09/dch_logo1-Transparent.png" alt="Delaware Center for Horticulture" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://www.dhss.delaware.gov/dph/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://news.delaware.gov/files/2017/06/DPH_Logo_centered_Transparent.png" alt="Delaware Department of Public Health" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://dema.delaware.gov/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKLi8nqj19iXxMKiVin0YC_uXfjdxJ5BKMcw&s" alt="Delaware Emergency Management Agency" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://www.delawarenaturesociety.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.delawarenaturesociety.org/wp-content/uploads/2018/03/cropped-cropped-cropped-cropped-lg-logo-round-1.png" alt="Delaware Nature Society" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/_jcr_content/par_udel/panelforpages/par_1/columngenerator/par_1/image.coreimg.jpeg/1710510225078/master-naturalist-logo.jpeg" alt="Delaware Master Naturalists" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.5);">
-        </a>
-        <a href="https://www.deuffc.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://images.squarespace-cdn.com/content/v1/61a7b5dcf593f65a736213c0/7fb1c8ef-1588-4c6a-994f-758cfc0d7dbe/DEUFFC_LOGO+transparent.png?format=1500w" alt="Delaware Urban Farm and Food Coalition" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://www.plasticfreedelaware.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://img1.wsimg.com/isteam/ip/cee4204f-7bf5-4319-b861-6e3affdab4a9/blob-0003.png/:/cr=t:3.14%25,l:0%25,w:100%25,h:93.72%25/rs=w:600,h:600,cg=true" alt="Plastic Free Delaware" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(2.4);">
-        </a>
-        <a href="https://www.nemours.org" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.esfcamps.com/wp-content/uploads/2022/11/Nemours_logo_Vertical_Condensed-1.png" alt="NeyMours" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.3);">
-        </a>
-        <a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/402099/images/ROUTE9.png" alt="Route 9 Library & Innovation Center" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.6);">
-        </a>
-        <a href="https://www.sierraclub.org/delaware" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.sierraclub.org/sites/default/themes/custom/bootpt/images/chapters/delaware.png" alt="Sierra Club Delaware Chapter" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.4);">
-        </a>
-        <a href="https://westsidehealth.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="https://www.westsidehealth.org/wp-content/uploads/2017/04/logo.png" alt="Westside Health Services" class="partner-logo" style="max-width: 1.05; max-height: 1.05; object-fit: contain; object-position: center; margin: auto; transform: scale(1.6);">
-        </a>
-        <div class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <p style="font-size: 1.2rem; color: #555;">You can be a partner too!</p>
-        </div>
-        </div>
-
+    <div class="container mt-5">
+      <div class="section-container">
+        <h1 class="mb-4">Our Partners</h1>
+        <p>We are proud to partner with these organizations committed to environmental sustainability and public health in Delaware.</p>
         
-        <!-- <a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/dhss.png" alt="Delaware Health and Social Services" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environment/natural-resources/delaware-master-naturalist/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/master-naturalists.png" alt="Delaware Master Naturalists" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.delawarenaturesociety.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/dns.png" alt="Delaware Nature Society" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/personal-economic-development/urban-agriculture/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/urban-farm.png" alt="Delaware Urban Farm and Food Coalition" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.delawareonline.com/story/news/2021/07/12/delawares-first-resilience-hub-opens-wilmington/7935480002/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/resilience-hub.png" alt="Delaware's First Resilience Hub" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://plasticfreedelaware.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/plastic-free.png" alt="Plastic Free Delaware" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/route9.png" alt="Route 9 Library & Innovation Center" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.sierraclub.org/delaware" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/sierra-club.png" alt="Sierra Club Delaware Chapter" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/udel.png" alt="University of Delaware - Cooperative Extension" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a>
-        <a href="https://westendnh.org/" class="partner-card" style="display: flex; align-items: center; justify-content: center; height: 150px;">
-          <img src="assets/partners/west-end.png" alt="West End Neighborhood House" class="partner-logo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto;">
-        </a> -->
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h2>Health Organizations</h2>
+            <ul class="list-unstyled partner-list">
+              <li class="mb-3">
+                <h5><a href="https://heart.org/delaware">American Heart Association</a></h5>
+                <p>Promoting cardiovascular health and research in Delaware.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></h5>
+                <p>Protecting and promoting the health of all people in Delaware.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.nemours.org">Nemours Children's Health</a></h5>
+                <p>Providing comprehensive pediatric healthcare and research.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-md-6">
+            <h2>Environmental Organizations</h2>
+            <ul class="list-unstyled partner-list">
+              <li class="mb-3">
+                <h5><a href="https://cleanair.org/">Clean Air Council</a></h5>
+                <p>Working for everyone's right to breathe clean air.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></h5>
+                <p>Cultivating a greener community through horticulture.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></h5>
+                <p>Protecting Delaware's environment and natural resources.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h2>Food & Agriculture</h2>
+            <ul class="list-unstyled partner-list">
+              <li class="mb-3">
+                <h5><a href="https://www.deuffc.org/">Delaware Urban Farm and Food Coalition</a></h5>
+                <p>Supporting sustainable local food systems.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></h5>
+                <p>Bringing university research and resources to the community.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-md-6">
+            <h2>Community Organizations</h2>
+            <ul class="list-unstyled partner-list">
+              <li class="mb-3">
+                <h5><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></h5>
+                <p>Preparing for and responding to emergencies.</p>
+              </li>
+              <li class="mb-3">
+                <h5><a href="https://www.facebook.com/DelawareResilienceHub/">Delaware's First Resilience Hub</a></h5>
+                <p>Building community resilience and sustainability.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <h3>Interested in Becoming a Partner?</h3>
+          <p>We're always looking for organizations that share our commitment to sustainability and public health.</p>
+          <a href="https://forms.office.com/r/LnbMdHw0cC" class="btn btn-success">Apply to Become a Partner</a>
+        </div>
       </div>
     </div>
-    <footer class="text-center py-4 mt-5 bg-light w-100">
+
+    <footer class="text-center py-4 mt-5 bg-light">
       <p class="mb-0">&copy; 2025 Delaware Division of Libraries</p>
     </footer>
   </body>
