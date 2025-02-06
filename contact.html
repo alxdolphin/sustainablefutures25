@@ -15,9 +15,59 @@
         --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         --font-primary: 'Roboto', sans-serif;
         --font-secondary: 'Open Sans', sans-serif;
+        font-size: 18px;
+      }
+      
+      body {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      
+      .section-container {
+        border: var(--border-style);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        background-color: white;
+      }
+      
+      .navbar {
+        box-shadow: var(--box-shadow);
+      }
+      
+      .jumbotron {
+        background-color: var(--primary-color) !important;
+        margin-bottom: 2rem !important;
+        box-shadow: var(--box-shadow);
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+      }
+
+      .contact-info {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .contact-info i {
+        color: var(--primary-color);
+        margin-right: 10px;
       }
     </style>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="https://lib.de.us/"><img src="https://libraries.delaware.gov/wp-content/uploads/sites/123/2016/08/ddl_logo_hr.jpg" alt="Sustainability Futures Resource Fair" style="height: 40px; width: auto;"></a>
@@ -45,91 +95,44 @@
       </div>
     </nav>
 
-    <div class="container mt-5">
-      <div class="section-container">
-        <h1 class="mb-4">Contact Us</h1>
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Get in Touch</h2>
-            <p>Have questions about the Resource Fair? Want to get involved? We'd love to hear from you!</p>
-            
-            <div class="mt-4">
-              <h3>Event Location</h3>
-              <p>
-                <strong>Route 9 Library and Innovation Center</strong><br>
-                3022 New Castle Ave<br>
-                New Castle, DE 19720
-              </p>
-            </div>
+    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 150px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);">
+      <div>
+        <h1 class="h2" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>Contact Us</b></h1>
+      </div>
+    </div>
 
-            <div class="mt-4">
-              <h3>Contact Information</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="fas fa-envelope me-2"></i>
-                  <a href="mailto:vista.health@lib.de.us">vista.health@lib.de.us</a>
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-phone me-2"></i>
-                  <a href="tel:+13023957610">(302) 395-7610</a>
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-globe me-2"></i>
-                  <a href="https://lib.de.us">lib.de.us</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="mt-4">
-              <h3>Follow Us</h3>
-              <div class="d-flex gap-3">
-                <a href="https://www.facebook.com/Route9Library" class="text-dark fs-4"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/DELibraries" class="text-dark fs-4"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/delawarelibraries/" class="text-dark fs-4"><i class="fab fa-instagram"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div class="section-container">
+            <h2 class="text-center mb-4">Event Organizers</h2>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <h5 class="text-primary"><b>AmeriCorps VISTA Healthy Futures Coordinator</b></h5>
+                <p><i>Alex Dalton</i><br>
+                <a href="mailto:vista.health@lib.de.us?subject=Sustainable%20Futures%20Resource%20Fair%20Inquiry" class="text-decoration-none">vista.health@lib.de.us</a></p>
+              </div>
+              <div class="col-md-6">
+                <h5 class="text-primary"><b>AmeriCorps VISTA Sustainability Coordinator</b></h5>
+                <p><i>Grace Roth</i><br>
+                <a href="mailto:vista.sustainability@lib.de.us?subject=Sustainable%20Futures%20Resource%20Fair%20Inquiry" class="text-decoration-none">vista.sustainability@lib.de.us</a></p>
               </div>
             </div>
-          </div>
-          
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Quick Links</h3>
-                <ul class="list-unstyled">
-                  <li class="mb-3">
-                    <a href="https://forms.office.com/r/LnbMdHw0cC" class="btn btn-success w-100">
-                      <i class="fas fa-handshake me-2"></i>Become a Partner
-                    </a>
-                  </li>
-                  <li class="mb-3">
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2025%20Sustainable%20Futures%20Resource%20Fair&dates=20250308T110000/20250308T140000&details=Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.&location=Route%209%20Library%20and%20Innovation%20Center,%203022%20New%20Castle%20Ave,%20New%20Castle,%20DE%2019720" class="btn btn-primary w-100">
-                      <i class="far fa-calendar-plus me-2"></i>Add to Calendar
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.google.com/maps/dir//Route+9+Library+%26+Innovation+Center,+3022+New+Castle+Ave,+New+Castle,+DE+19720" class="btn btn-secondary w-100">
-                      <i class="fas fa-directions me-2"></i>Get Directions
-                    </a>
-                  </li>
-                </ul>
+            <div class="text-center font-weight-bold my-4" style="font-size: 1.5rem;">In Collaboration With:</div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="text-success"><b>Delaware Division of Libraries</b></h5>
+                <p>Providing statewide leadership and infrastructure support for Delaware's public libraries.</p>
               </div>
-            </div>
-            
-            <div class="mt-4">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.6792489172594!2d-75.55348662203417!3d39.70191519883183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c702c21915a2ff%3A0x16fe41acceba05e5!2sRoute%209%20Library%20%26%20Innovation%20Center!5e0!3m2!1sen!2sus!4v1738797542262!5m2!1sen!2sus"
-                width="100%" 
-                height="300" 
-                style="border:0; border-radius: 8px; box-shadow: var(--box-shadow)" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+              <div class="col-md-6">
+                <h5 class="text-success"><b>Route 9 Library and Innovation Center</b></h5>
+                <p>Host venue providing a modern, accessible space for community engagement and learning.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <footer class="text-center py-4 mt-5 bg-light">
       <p class="mb-0">&copy; 2025 Delaware Division of Libraries</p>
     </footer>
