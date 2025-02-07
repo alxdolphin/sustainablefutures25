@@ -1,0 +1,7 @@
+#! /usr/bin/env python3
+
+import qrcode
+
+url = "https://www.sustainablefutures.live"
+qr = qrcode.make(url)
+qr.save("SF25.png")
