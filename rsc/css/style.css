@@ -68,4 +68,29 @@ body {
 .info-item:hover {
   background-color: #f8f9fa;
   padding-left: 8px;
-} 
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
