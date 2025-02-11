@@ -13,6 +13,26 @@
     <meta property="og:title" content="2025 Sustainable Futures Resource Fair">
     <meta property="og:description" content="Join us for the 2025 Sustainable Futures Resource Fair at Route 9 Library.">
     <meta property="og:image" content="/rsc/img/logo.png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.addEventListener('load', () => img.classList.add('loaded'));
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      });
+    </script>
     <style>
       :root {
         --primary-color: rgb(147, 177, 69);
@@ -95,6 +115,20 @@
       .info-item:hover {
         background-color: #f8f9fa;
         padding-left: 8px;
+      }
+
+      @media (max-width: 576px) {
+        .jumbotron {
+          min-height: 300px;
+        }
+        
+        .countdown-container {
+          flex-wrap: wrap;
+        }
+        
+        .partner-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>

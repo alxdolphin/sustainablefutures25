@@ -13,6 +13,26 @@
     <link rel="stylesheet" href="rsc/css/style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.addEventListener('load', () => img.classList.add('loaded'));
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      });
+    </script>
     <style>
       :root {
         --primary-color: rgb(147, 177, 69);
@@ -45,6 +65,20 @@
         background-color: var(--primary-color) !important;
         margin-bottom: 2rem !important;
         box-shadow: var(--box-shadow);
+      }
+
+      @media (max-width: 576px) {
+        .jumbotron {
+          min-height: 300px;
+        }
+        
+        .countdown-container {
+          flex-wrap: wrap;
+        }
+        
+        .partner-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -108,4 +142,3 @@
   </footer>
 </body>
 </html>
-
