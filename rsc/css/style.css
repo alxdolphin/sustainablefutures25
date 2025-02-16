@@ -27,82 +27,61 @@ body {
 
 .jumbotron {
   background-color: var(--primary-color) !important;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
+  box-shadow: var(--box-shadow);
+  min-height: 200px;
+  color: white;
+}
+
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron span, .jumbotron div {
+  color: white;
+  font-family: var(--font-primary);
+}
+
+.jumbotron h1, .jumbotron h2, .jumbotron h3 {
+  font-weight: 700;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+}
+
+.jumbotron h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.jumbotron h2 {
+  font-size: 1.5rem;
+}
+
+.jumbotron h3 {
+  font-size: 1.25rem;
+}
+
+.countdown-container .h2 {
+  font-size: 1.5rem;
+}
+
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color: #f8f9fa;
+  padding-left: 8px;
+}
+
+.shadow-element, .navbar, .jumbotron, .event-image {
   box-shadow: var(--box-shadow);
 }
 
-.jumbotron h1.display-4 {
-  font-size: calc(1.5rem + 3vw);
-}
-
-.jumbotron h2.h2 {
-  font-size: calc(1.2rem + 1vw);
-}
-
-.jumbotron h3.h3 {
-  font-size: calc(1rem + 0.8vw);
-}
-
-@media (max-width: 768px) {
-  :root {
-    font-size: 16px;
-  }
-  
-  .section-container {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  .jumbotron {
-    padding: 2rem 1rem !important;
-  }
-  
-  .countdown-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .countdown-item {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    font-size: 0.9rem;
-  }
-  
-  .section-container {
-    padding: 10px;
-  }
-  
-  .partner-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .partner-card {
-    padding: 1rem;
-  }
-  
-  .partner-logo {
-    max-height: 100px;
-  }
-}
-
 .partner-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
   transition: all 0.3s ease;
 }
 
 .partner-list li:hover {
   background-color: #f8f9fa;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .event-image {
@@ -185,3 +164,62 @@ body {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 576px) {
+  .jumbotron {
+    min-height: 300px;
+  }
+  
+  .countdown-container {
+    flex-wrap: wrap;
+  }
+  
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  body {
+    font-size: 0.9rem;
+  }
+  
+  .section-container {
+    padding: 10px;
+  }
+  
+  .partner-card {
+    padding: 1rem;
+  }
+  
+  .partner-logo {
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  
+  .section-container {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .jumbotron {
+    padding: 2rem 1rem !important;
+  }
+  
+  .countdown-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .countdown-item {
+    width: 100%;
+    text-align: center;
+  }
+}

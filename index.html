@@ -147,6 +147,255 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .hero-section {
+        position: relative;
+        min-height: 64vh;
+        background: linear-gradient(135deg, #93B145 0%, #2C5530 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 0;
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        white-space: nowrap;
+      }
+
+      .hero-subtitle {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      }
+
+      .hero-date {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      }
+
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .countdown-item {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        padding: 1.5rem;
+        border-radius: 10px;
+        min-width: 120px;
+      }
+
+      .countdown-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: white;
+      }
+
+      .countdown-label {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero-buttons {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 1200px) {
+        .hero-title {
+          font-size: 2.75rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .countdown-container {
+          flex-wrap: wrap;
+        }
+
+        .countdown-item {
+          min-width: 40%;
+        }
+      }
+
+      .partner-card {
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .partner-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .partner-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        height: 100%;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .partner-card {
+          padding: 0.5rem;
+        }
+        
+        .partner-card i {
+          font-size: 1.5rem !important;
+        }
+        
+        .partner-card .small {
+          font-size: 0.75rem;
+        }
+      }
+
+      .partners-scroll {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        background: transparent;
+        margin: 2rem 0;
+      }
+
+      .scroll-track {
+        display: flex;
+        width: fit-content;
+        animation: scroll 40s linear infinite;
+      }
+
+      .scroll-content {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+      }
+
+      .partner-logo-link {
+        flex: 0 0 180px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 8px;
+      }
+
+      .partner-logo-link:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .partner-logo-link img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+
+      .partner-logo-link:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-50% - 1rem));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .partners-scroll {
+          height: 100px;
+        }
+
+        .partner-logo-link {
+          flex: 0 0 150px;
+          height: 70px;
+        }
+        
+        .scroll-content {
+          gap: 1.5rem;
+        }
+      }
     </style>
   </head>
 
@@ -183,32 +432,46 @@
       This page is currently in development. Content is subject to change.
     </div>
 
-    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 200px;">
-      <div class="container">
-        <h1 class="display-4 fw-bold mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">2025 Sustainable Futures Resource Fair</h1>
-        <h2 class="h2 mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Route 9 Library and Innovation Center</h2>
-        <h3 class="h3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">March 8, 2025 11:00 AM - 2:00 PM</h3>
-        <div class="mt-4">
-          <div class="d-flex justify-content-center gap-4">
-            <div><span id="days" class="h2">00</span><br>Days</div>
-            <div><span id="hours" class="h2">00</span><br>Hours</div>
-            <div><span id="minutes" class="h2">00</span><br>Minutes</div>
-            <div><span id="seconds" class="h2">00</span><br>Seconds</div>
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">2025 Sustainable Futures Resource Fair</h1>
+        <h2 class="hero-subtitle">Route 9 Library and Innovation Center</h2>
+        <h3 class="hero-date">March 8, 2025 11:00 AM - 2:00 PM</h3>
+        
+        <div class="countdown-container">
+          <div class="countdown-item">
+            <div class="countdown-number" id="days">00</div>
+            <div class="countdown-label">Days</div>
           </div>
-          <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
-            <a href="https://outlook.office.com/calendar/0/deeplink/compose?subject=2025%20Sustainable%20Futures%20Resource%20Fair&body=Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.%0A%0ALocation%3A%203022%20New%20Castle%20Ave%2C%20New%20Castle%2C%20DE%2019720&startdt=2025-03-08T11:00:00&enddt=2025-03-08T14:00:00&location=Route%209%20Library%20and%20Innovation%20Center" class="btn btn-primary">
-              <i class="far fa-calendar-plus"></i> Outlook
-            </a>
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2025%20Sustainable%20Futures%20Resource%20Fair&dates=20250308T110000/20250308T140000&details=Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.&location=Route%209%20Library%20and%20Innovation%20Center,%203022%20New%20Castle%20Ave,%20New%20Castle,%20DE%2019720" class="btn btn-danger">
-              <i class="far fa-calendar-plus"></i> Google
-            </a>
-            <a href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0ADTSTART:20250308T110000%0D%0ADTEND:20250308T140000%0D%0ASUMMARY:2025%20Sustainable%20Futures%20Resource%20Fair%0D%0ADESCRIPTION:Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.%0D%0ALOCATION:Route%209%20Library%20and%20Innovation%20Center,%203022%20New%20Castle%20Ave,%20New%20Castle,%20DE%2019720%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR" class="btn btn-secondary" download="event.ics">
-              <i class="fab fa-apple"></i> Apple
-            </a>
+          <div class="countdown-item">
+            <div class="countdown-number" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="seconds">00</div>
+            <div class="countdown-label">Seconds</div>
           </div>
         </div>
+
+        <div class="hero-buttons">
+          <a href="https://outlook.office.com/calendar/0/deeplink/compose?subject=2025%20Sustainable%20Futures%20Resource%20Fair&body=Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.%0A%0ALocation%3A%203022%20New%20Castle%20Ave%2C%20New%20Castle%2C%20DE%2019720&startdt=2025-03-08T11:00:00&enddt=2025-03-08T14:00:00&location=Route%209%20Library%20and%20Innovation%20Center" class="btn btn-light hero-btn">
+            <i class="far fa-calendar-plus"></i> Outlook
+          </a>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2025%20Sustainable%20Futures%20Resource%20Fair&dates=20250308T110000/20250308T140000&details=Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.&location=Route%209%20Library%20and%20Innovation%20Center,%203022%20New%20Castle%20Ave,%20New%20Castle,%20DE%2019720" class="btn btn-light hero-btn">
+            <i class="far fa-calendar-plus"></i> Google
+          </a>
+          <a href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0ADTSTART:20250308T110000%0D%0ADTEND:20250308T140000%0D%0ASUMMARY:2025%20Sustainable%20Futures%20Resource%20Fair%0D%0ADESCRIPTION:Join%20us%20for%20the%202025%20Sustainable%20Futures%20Resource%20Fair%20at%20Route%209%20Library%20and%20Innovation%20Center.%0D%0ALOCATION:Route%209%20Library%20and%20Innovation%20Center,%203022%20New%20Castle%20Ave,%20New%20Castle,%20DE%2019720%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR" class="btn btn-light hero-btn" download="event.ics">
+            <i class="fab fa-apple"></i> Apple
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
+
     <div class="container">
       <section id="about" class="section-container">
         <h2>About</h2>
@@ -217,75 +480,120 @@
         </p>
       </section>
 
-      <div class="row mt-4">
-        <div class="col-md-3">
-          <section id="partners" class="section-container">
-            <h2 class="text-center mb-4">Partners</h2>
-            <ul class="list-unstyled partner-list">
-              <li><a href="https://heart.org/delaware">American Heart Association</a></li>
-              <li><a href="https://www.redcross.org">American Red Cross</a></li>
-              <li><a href="https://cleanair.org/">Clean Air Council</a></li>
-              <li><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></li>
-              <li><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
-              <li><a href="https://www.delmarva.com/">Delmarva Power</a></li>
-              <li><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
-              <li><a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html">Delaware Health and Social Services (DHSS) - Diabetes and Heart Disease Prevention and Control</a></li>
-              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/">Delaware Master Naturalists</a></li>
-              <li><a href="https://www.delawarenaturesociety.org/">Delaware Nature Society</a></li>
-              <li><a href="https://quitnow.net/delaware?qnclient=delaware">Delaware Quitline</a></li>
-              <li><a href="https://www.deuffc.org/">Delaware Urban Farm and Food Coalition</a></li>
-              <li><a href="https://www.delmarva.com/">Delmarva Power</a></li>
-              <li><a href="https://www.energizedelaware.org/">Energize Delaware</a></li>
-              <li><a href="https://www.nemours.org">Nemours Children's Health</a></li>
-              <li><a href="https://plasticfreedelaware.org/">Plastic Free Delaware / Zero Waste First State</a></li>
-              <li><a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center">Route 9 Library & Innovation Center</a></li>
-              <li><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></li>
-              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></li>
-              <li><a href="https://westsidehealth.org/">Westside Family Healthcare</a></li>
-              <li><a href="https://offshorewinddelaware.org/">People for Offshore Wind Energy Resources</a></li>
-              <li><a href="https://www.plasticfreedelaware.org/">Plastic Free Delaware</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-md-9 ">
-          <a href="https://forms.office.com/r/LnbMdHw0cC">  
-            <img src="/rsc/img/SF25Flyer.png" class="img-fluid w-100 event-image mb-4" alt="Sustainable Futures Resource Fair promotional image showing event details: March 8, 2025 from 11am-2pm at Route 9 Library. The fair will cover topics such as air quality, sustainable food systems, and healthy living. The image includes a call to action for organizations to become partners in the event, with the email address 'vista.health@lib.de.us' listed as a contact.">
-          </a>
-          <div class="mt-3 section-container">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <h4 class="fw-bold text-success"><b>Event Schedule</b></h4>
-                <ul class="list-unstyled border-start border-primary ps-3" style="border-left-width: 4px !important;">
-                  <li class="schedule-item"><strong>10:00 AM:</strong> Set Up</li>
-                  <li class="schedule-item"><strong>11:00 AM:</strong> Event Opens - Visit Partner Tables</li>
-                  <li class="schedule-item"><strong>11:30 AM:</strong> Welcome Address</li>
-                  <li class="schedule-item"><strong>12:00 PM:</strong> Speaker Sessions
-                    <ul>
-                      <i>Schedule to be announced</i>
-                    </ul>
-                  </li>
-                  <li class="schedule-item"><strong>1:45 PM:</strong> Closing Remarks</li>
-                  <li class="schedule-item"><strong>2:00 PM:</strong>Tear Down</li>
-                </ul>
-
+      <div class="col-12">
+        <div class="section-container p-4">
+          <div class="row">
+            <div class="col-lg-7 mb-4">
+              <div class="border rounded p-3 bg-white">
+                <img src="/rsc/img/SF25Flyer.png" class="img-fluid w-100" alt="Sustainable Futures Resource Fair promotional image showing event details: March 8, 2025 from 11am-2pm at Route 9 Library">
               </div>
-              <div class="col-md-6 d-flex align-items-center">
-                <div>
-                  <h4 class="text-center" style="text-decoration: underline;"><b>Event Information</b></h4>
-                  <ul class="list-unstyled">
-                    <li><strong>Date:</strong> March 8, 2025</li>
-                    <li><strong>Time:</strong> 11:00 AM - 2:00 PM</li>
-                    <li><strong>Location:</strong> Route 9 Library and Innovation Center</li>
-                    <li><strong>Address:</strong> 3022 New Castle Ave, New Castle, DE 19720</li>
-                    <li><strong>Cost:</strong> Free and open to the public</li>
-                    <li class="d-flex align-items-center gap-2"><strong>Interested in contributing?</strong> <a href="https://forms.office.com/r/LnbMdHw0cC" class="btn btn-success btn-sm">Become a Partner</a></li>
-                  </ul>
-                  <div class="mt-3">
+              <div class="text-center mt-3">
+                <a href="/rsc/img/SF25Flyer.pdf" download class="btn btn-outline-success">
+                  <i class="fas fa-download me-2"></i>Download Flyer
+                </a>
+              </div>
+            </div>
+            
+            <div class="col-lg-5">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="border rounded p-3 h-100 bg-white">
+                    <h3 class="text-success mb-3">
+                      <i class="fas fa-calendar-alt me-2"></i>Event Schedule
+                    </h3>
+                    <div class="border-start border-success ps-3" style="border-left-width: 3px !important;">
+                      <div class="schedule-item mb-3">
+                        <strong>10:00 AM:</strong> 
+                        <div class="text-muted">Set Up</div>
+                      </div>
+                      <div class="schedule-item mb-3">
+                        <strong>11:00 AM:</strong>
+                        <div class="text-muted">Event Opens - Visit Partner Tables</div>
+                      </div>
+                      <div class="schedule-item mb-3">
+                        <strong>11:30 AM:</strong>
+                        <div class="text-muted">Welcome Address</div>
+                      </div>
+                      <div class="schedule-item mb-3">
+                        <strong>12:00 PM:</strong>
+                        <div class="text-muted">Speaker Sessions</div>
+                        <div class="small fst-italic">Schedule to be announced</div>
+                      </div>
+                      <div class="schedule-item mb-3">
+                        <strong>1:45 PM:</strong>
+                        <div class="text-muted">Closing Remarks</div>
+                      </div>
+                      <div class="schedule-item">
+                        <strong>2:00 PM:</strong>
+                        <div class="text-muted">Tear Down</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="border rounded p-3 h-100 bg-white">
+                    <h3 class="text-success mb-3">
+                      <i class="fas fa-info-circle me-2"></i>Event Details
+                    </h3>
+                    <div class="info-items">
+                      <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="far fa-calendar-check text-success me-2"></i>
+                          <strong>Date:</strong>
+                        </div>
+                        <div class="text-muted ps-4">March 8, 2025</div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="far fa-clock text-success me-2"></i>
+                          <strong>Time:</strong>
+                        </div>
+                        <div class="text-muted ps-4">11:00 AM - 2:00 PM</div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-building text-success me-2"></i>
+                          <strong>Location:</strong>
+                        </div>
+                        <div class="text-muted ps-4">Route 9 Library and Innovation Center</div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-map-marker-alt text-success me-2"></i>
+                          <strong>Address:</strong>
+                        </div>
+                        <div class="text-muted ps-4">3022 New Castle Ave, New Castle, DE 19720</div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-ticket-alt text-success me-2"></i>
+                          <strong>Cost:</strong>
+                        </div>
+                        <div class="text-muted ps-4">Free and open to the public</div>
+                      </div>
+                    </div>
+                    <div class="mt-4 pt-2 border-top">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                          <i class="fas fa-handshake text-success me-2"></i>
+                          <strong>Want to contribute?</strong>
+                        </div>
+                        <a href="https://forms.office.com/r/LnbMdHw0cC" class="btn btn-success btn-sm">
+                          Become a Partner
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="border rounded p-2 bg-white">
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.6792489172594!2d-75.55348662203417!3d39.70191519883183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c702c21915a2ff%3A0x16fe41acceba05e5!2sRoute%209%20Library%20%26%20Innovation%20Center!5e0!3m2!1sen!2sus!4v1738797542262!5m2!1sen!2sus"
                       width="100%" 
-                      height="300" 
-                      style="border:0; border-radius: 8px; box-shadow: var(--box-shadow)" 
+                      height="200" 
+                      class="border rounded"
                       allowfullscreen="" 
                       loading="lazy" 
                       referrerpolicy="no-referrer-when-downgrade">
@@ -295,12 +603,49 @@
               </div>
             </div>
           </div>
-          <div class="text-center mb-4">
-            <p class="mb-2">Help us spread the word! Download and share our event flyer:</p>
-            <a href="/rsc/img/SF25Flyer.png" download class="btn btn-outline-success">
-              <i class="fas fa-download me-2"></i>Download Flyer
-            </a>
-          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners-scroll mb-4">
+      <div class="scroll-track">
+        <div class="scroll-content">
+          <a href="https://www.heart.org/" class="partner-logo-link">
+            <img src="https://www.heart.org/en/-/media/Images/Logos/Global-Do-No-Edit/Header/AHA_Full.svg?h=256&iar=0&mw=1910&w=426&sc_lang=en" alt="American Heart Association">
+          </a>
+          <a href="https://www.redcross.org" class="partner-logo-link">
+            <img src="https://www.redcross.org/content/dam/redcross/imported-images/redcross-logo.png.img.png" alt="American Red Cross">
+          </a>
+          <a href="https://cleanair.org/" class="partner-logo-link">
+            <img src="https://cdn.greatnonprofits.org/images/logos/CACPantone072HighRes.jpg" alt="Clean Air Council">
+          </a>
+          <a href="https://dema.delaware.gov/" class="partner-logo-link">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKLi8nqj19iXxMKiVin0YC_uXfjdxJ5BKMcw&s" alt="Delaware Emergency Management Agency">
+          </a>
+          <a href="https://udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/" class="partner-logo-link">
+            <img src="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/_jcr_content/par_udel/panelforpages/par_1/columngenerator/par_1/image.coreimg.jpeg/1710510225078/master-naturalist-logo.jpeg" alt="Delaware Master Naturalists">
+          </a>
+          <a href="https://quitnow.net/delaware?qnclient=delaware" class="partner-logo-link">
+            <img src="https://www.medicalsocietyofdelaware.org/delaware/images/KRISTIE%20FOR%20WEBSITE/Color%20Quitline%20Logo.png" alt="Delaware Quitline">
+          </a>
+          <a href="https://www.deuffc.org/" class="partner-logo-link">
+            <img src="https://images.squarespace-cdn.com/content/v1/61a7b5dcf593f65a736213c0/7fb1c8ef-1588-4c6a-994f-758cfc0d7dbe/DEUFFC_LOGO+transparent.png?format=1500w" alt="Delaware Urban Farm and Food Coalition">
+          </a>
+          <a href="https://offshorewinddelaware.org/" class="partner-logo-link">
+            <img src="https://offshorewinddelaware.org/wp-content/uploads/2023/04/LOGOsquare1_2.jpg" alt="People for Offshore Wind Energy Resources">
+          </a>
+          <a href="https://www.plasticfreedelaware.org/" class="partner-logo-link">
+            <img src="https://img1.wsimg.com/isteam/ip/cee4204f-7bf5-4319-b861-6e3affdab4a9/blob-0003.png/:/cr=t:3.14%25,l:0%25,w:100%25,h:93.72%25/rs=w:600,h:600,cg:true" alt="Plastic Free Delaware">
+          </a>
+          <a href="https://www.thedch.org/" class="partner-logo-link">
+            <img src="https://corpsnetwork.org/wp-content/uploads/gravity_forms/10-e71dec903a7e429b90387f4e5e320e56/2023/09/dch_logo1-Transparent.png" alt="Delaware Center for Horticulture">
+          </a>
+          <a href="https://www.udel.edu/canr/cooperative-extension/" class="partner-logo-link">
+            <img src="https://www.academicimpressions.com/wp-content/uploads/2021/10/logo-udel.png" alt="University of Delaware - Cooperative Extension">
+          </a>
+          <a href="https://westsidehealth.org/" class="partner-logo-link">
+            <img src="https://www.westsidehealth.org/wp-content/uploads/2017/04/logo.png" alt="Westside Family Healthcare">
+          </a>
         </div>
       </div>
     </div>
