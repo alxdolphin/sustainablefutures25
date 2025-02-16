@@ -74,13 +74,31 @@
         text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
       }
       
-      .partner-list li {
+      .hover-effect {
         transition: all 0.3s ease;
       }
       
-      .partner-list li:hover {
+      .hover-effect:hover {
         background-color: #f8f9fa;
-        padding-left: 10px;
+        padding-left: 8px;
+      }
+
+      .shadow-element, .navbar, .jumbotron, .event-image {
+        box-shadow: var(--box-shadow);
+      }
+      
+      .hover-effect, .partner-list li, .schedule-item, .info-item {
+        transition: all 0.3s ease;
+      }
+      
+      .hover-effect:hover, .partner-list li:hover, .schedule-item:hover, .info-item:hover {
+        background-color: #f8f9fa;
+        padding-left: 8px;
+      }
+      
+      .partner-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #e0e0e0;
       }
       
       .event-image {
@@ -98,19 +116,9 @@
         transition: all 0.2s ease;
       }
       
-      .schedule-item:hover {
-        background-color: #f8f9fa;
-        padding-left: 8px;
-      }
-      
       .info-item {
         padding: 8px 0;
         transition: all 0.2s ease;
-      }
-      
-      .info-item:hover {
-        background-color: #f8f9fa;
-        padding-left: 8px;
       }
 
       @media (max-width: 576px) {
@@ -201,28 +209,28 @@
           <section id="partners" class="section-container">
             <h2 class="text-center mb-4">Partners</h2>
             <ul class="list-unstyled partner-list">
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://heart.org/delaware">American Heart Association</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.redcross.org">American Red Cross</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://cleanair.org/">Clean Air Council</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.delmarva.com/">Delmarva Power</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html">Delaware Health and Social Services (DHSS) - Diabetes and Heart Disease Prevention and Control</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/">Delaware Master Naturalists</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.delawarenaturesociety.org/">Delaware Nature Society</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://quitnow.net/delaware?qnclient=delaware">Delaware Quitline</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.deuffc.org/">Delaware Urban Farm and Food Coalition</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.delmarva.com/">Delmarva Power</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.energizedelaware.org/">Energize Delaware</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.nemours.org">Nemours Children's Health</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://plasticfreedelaware.org/">Plastic Free Delaware / Zero Waste First State</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center">Route 9 Library & Innovation Center</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://westsidehealth.org/">Westside Family Healthcare</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://offshorewinddelaware.org/">People for Offshore Wind Energy Resources</a></li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #e0e0e0;"><a href="https://www.plasticfreedelaware.org/">Plastic Free Delaware</a></li>
+              <li><a href="https://heart.org/delaware">American Heart Association</a></li>
+              <li><a href="https://www.redcross.org">American Red Cross</a></li>
+              <li><a href="https://cleanair.org/">Clean Air Council</a></li>
+              <li><a href="https://dema.delaware.gov/">Delaware Emergency Management Agency (DEMA)</a></li>
+              <li><a href="https://www.dhss.delaware.gov/dph/">Delaware Department of Public Health (DPH)</a></li>
+              <li><a href="https://www.delmarva.com/">Delmarva Power</a></li>
+              <li><a href="https://www.thedch.org/">Delaware Center for Horticulture</a></li>
+              <li><a href="https://www.dhss.delaware.gov/dhss/dph/dpc/diabetes.html">Delaware Health and Social Services (DHSS) - Diabetes and Heart Disease Prevention and Control</a></li>
+              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/environmental-stewardship/master-naturalist/">Delaware Master Naturalists</a></li>
+              <li><a href="https://www.delawarenaturesociety.org/">Delaware Nature Society</a></li>
+              <li><a href="https://quitnow.net/delaware?qnclient=delaware">Delaware Quitline</a></li>
+              <li><a href="https://www.deuffc.org/">Delaware Urban Farm and Food Coalition</a></li>
+              <li><a href="https://www.delmarva.com/">Delmarva Power</a></li>
+              <li><a href="https://www.energizedelaware.org/">Energize Delaware</a></li>
+              <li><a href="https://www.nemours.org">Nemours Children's Health</a></li>
+              <li><a href="https://plasticfreedelaware.org/">Plastic Free Delaware / Zero Waste First State</a></li>
+              <li><a href="https://www.newcastlede.gov/1389/Route-9-Library-Innovation-Center">Route 9 Library & Innovation Center</a></li>
+              <li><a href="https://www.sierraclub.org/delaware">Sierra Club Delaware Chapter</a></li>
+              <li><a href="https://www.udel.edu/academics/colleges/canr/cooperative-extension/">University of Delaware - Cooperative Extension</a></li>
+              <li><a href="https://westsidehealth.org/">Westside Family Healthcare</a></li>
+              <li><a href="https://offshorewinddelaware.org/">People for Offshore Wind Energy Resources</a></li>
+              <li><a href="https://www.plasticfreedelaware.org/">Plastic Free Delaware</a></li>
             </ul>
           </section>
         </div>
@@ -273,6 +281,12 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="text-center mb-4">
+            <p class="mb-2">Help us spread the word! Download and share our event flyer:</p>
+            <a href="/rsc/img/SF25Flyer.png" download class="btn btn-outline-success">
+              <i class="fas fa-download me-2"></i>Download Flyer
+            </a>
           </div>
         </div>
       </div>
