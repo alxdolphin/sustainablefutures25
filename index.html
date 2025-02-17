@@ -155,9 +155,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         margin-bottom: 2rem;
         overflow: hidden;
+        text-align: center;
       }
 
       .hero-overlay {
@@ -181,21 +182,22 @@
       }
 
       .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(1.75rem, 5vw, 3.5rem);
         font-weight: 800;
         margin-bottom: 1rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        white-space: nowrap;
+        white-space: normal;
+        line-height: 1.2;
       }
 
       .hero-subtitle {
-        font-size: 2rem;
+        font-size: clamp(1.25rem, 3vw, 2rem);
         margin-bottom: 0.5rem;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       }
 
       .hero-date {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
         margin-bottom: 2rem;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       }
@@ -203,20 +205,22 @@
       .countdown-container {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: clamp(0.5rem, 2vw, 2rem);
         margin-top: 2rem;
+        flex-wrap: wrap;
       }
 
       .countdown-item {
         background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(5px);
-        padding: 1.5rem;
+        padding: clamp(0.75rem, 2vw, 1.5rem);
         border-radius: 10px;
-        min-width: 120px;
+        min-width: clamp(80px, 20vw, 120px);
+        margin-bottom: 1rem;
       }
 
       .countdown-number {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         font-weight: 700;
         margin-bottom: 0.5rem;
         color: white;
@@ -232,19 +236,24 @@
       .hero-buttons {
         margin-top: 2rem;
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0 1rem;
       }
 
       .hero-btn {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.2rem;
         border-radius: 50px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.3s ease;
         backdrop-filter: blur(5px);
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: 200px;
       }
 
       .hero-btn:hover {
@@ -258,18 +267,75 @@
       }
 
       @media (max-width: 768px) {
+        .hero-section {
+          min-height: auto;
+          padding: 2rem 1rem;
+          background: linear-gradient(to bottom, #93B145 0%, #2C5530 100%);
+        }
+        
+        .hero-content {
+          padding: 0 10px;
+        }
+        
         .hero-title {
-          font-size: 2rem;
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 1.25rem;
+          margin-bottom: 0.25rem;
+        }
+        
+        .hero-date {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .countdown-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+          margin-top: 1rem;
+        }
+        
+        .countdown-item {
+          min-width: unset;
+          padding: 0.75rem;
+          margin-bottom: 0;
+        }
+        
+        .countdown-number {
+          font-size: 1.5rem;
+        }
+        
+        .countdown-label {
+          font-size: 0.875rem;
+        }
+        
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 1.5rem;
+          gap: 0.5rem;
+        }
+        
+        .hero-btn {
+          width: 100%;
+          max-width: 250px;
+          margin-bottom: 0;
+          padding: 0.75rem 1rem;
         }
       }
 
-      @media (max-width: 576px) {
-        .countdown-container {
-          flex-wrap: wrap;
-        }
-
+      @media (max-width: 480px) {
         .countdown-item {
-          min-width: 40%;
+          min-width: calc(50% - 1rem);
+        }
+        
+        .hero-btn {
+          font-size: 0.875rem;
+          padding: 0.6rem 1rem;
         }
       }
 
