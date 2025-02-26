@@ -19,6 +19,12 @@
         images.forEach(img => {
           img.addEventListener('load', () => img.classList.add('loaded'));
         });
+
+        const mapIframe = document.querySelector('.responsive-map');
+        if (mapIframe) {
+          mapIframe.addEventListener('load', () => mapIframe.classList.add('loaded'));
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -462,6 +468,17 @@
           gap: 1.5rem;
         }
       }
+
+      .responsive-map {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background: #f8f9fa;
+        min-height: 200px;
+      }
+
+      .responsive-map.loaded {
+        opacity: 1;
+      }
     </style>
   </head>
 
@@ -656,13 +673,15 @@
                 <div class="col-12">
                   <div class="border rounded p-2 bg-white">
                     <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.6792489172594!2d-75.55348662203417!3d39.70191519883183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c702c21915a2ff%3A0x16fe41acceba05e5!2sRoute%209%20Library%20%26%20Innovation%20Center!5e0!3m2!1sen!2sus!4v1738797542262!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.67924891722!2d-75.55348662250363!3d39.701915198832715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c702c21915a2ff%3A0x16fe41acceba05e5!2sRoute%209%20Library%20%26%20Innovation%20Center!5e0!3m2!1sen!2sus!4v1740600279421!5m2!1sen!2sus"
                       width="100%" 
                       height="200" 
-                      class="border rounded"
-                      allowfullscreen="" 
+                      class="responsive-map"
+                      style="border:0;"
+                      title="Route 9 Library & Innovation Center Location"
                       loading="lazy" 
-                      referrerpolicy="no-referrer-when-downgrade">
+                      referrerpolicy="no-referrer-when-downgrade"
+                      onload="this.style.opacity=1">
                     </iframe>
                   </div>
                 </div>
