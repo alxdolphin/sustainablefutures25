@@ -1,10 +1,122 @@
 :root {
   --primary-color: rgb(147, 177, 69);
+  --secondary-color: #2C5530;
+  --light-green: #E1F5D2;
   --border-style: 2px solid #333;
   --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   --font-primary: 'Roboto', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
   font-size: 18px;
+}
+
+/* Navigation Styles */
+.navbar {
+  box-shadow: var(--box-shadow);
+  background-color: white !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color) !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  color: #333 !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+.nav-link.active::after {
+  width: 80%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: -8px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
 }
 
 body {
@@ -19,10 +131,6 @@ body {
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   background-color: white;
-}
-
-.navbar {
-  box-shadow: var(--box-shadow);
 }
 
 .jumbotron {
@@ -131,11 +239,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.nav-link.active {
-  color: var(--primary-color) !important;
-  font-weight: bold;
 }
 
 .partner-grid {

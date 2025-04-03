@@ -24,27 +24,6 @@
         });
     </script>
     <style>
-      :root {
-        --primary-color: rgb(147, 177, 69);
-        --border-style: 2px solid #333;
-        --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        --font-primary: 'Roboto', sans-serif;
-        --font-secondary: 'Open Sans', sans-serif;
-        font-size: 18px;
-      }
-      
-      body {
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .partner-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-      }
-
       .partner-card {
         background: white;
         padding: 1.5rem;
@@ -77,14 +56,6 @@
       }
 
       @media (max-width: 576px) {
-        .jumbotron {
-          min-height: 300px;
-        }
-        
-        .countdown-container {
-          flex-wrap: wrap;
-        }
-        
         .partner-grid {
           grid-template-columns: 1fr;
         }
@@ -121,10 +92,10 @@
       </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center" style="background-color: rgb(147, 177, 69); color: white; margin-bottom: 1rem; min-height: 150px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);">
+    <div class="jumbotron jumbotron-fluid text-center py-2 d-flex align-items-center justify-content-center">
       <div>
-        <h1 class="h2" style="text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;"><b>Our Partners</b></h1>
-        <p style="font-style: italic; text-shadow: 2px 2px 4px #000;">We are grateful for the support of the following organizations and individuals who have made this event possible.</p>
+        <h1 class="h2"><b>Our Partners</b></h1>
+        <p style="font-style: italic;">We are grateful for the support of the following organizations and individuals who have made this event possible.</p>
       </div>
     </div>
 
